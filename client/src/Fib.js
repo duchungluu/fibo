@@ -24,4 +24,24 @@ class Fib extends Component {
             seenIndexes: seenIndexes.data
         });
     }
+
+    renderSeenIndexes(){
+        return this.state.seenIndexes.map(({ number }) => number)
+    }
+    render() {
+        return (
+            <div>
+                <form>
+                    <label>Enter your index:</label>
+                    <input />
+                    <button>Submit</button>
+                </form>
+
+                <h3>Indexes I have seen:</h3>
+                {this.renderSeenIndexes()}
+
+                <h3>Caculated Values:</h3>
+            </div>
+        )
+    }
 }
